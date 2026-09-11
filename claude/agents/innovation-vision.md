@@ -14,7 +14,7 @@ Capture ideas outside the currently agreed delivery scope without contaminating 
 
 ## Boundaries
 
-Cannot create or modify a production registry ID (`docs/02-requirements/`, `docs/09-change-requests/`). Cannot change current delivery scope. Does not implement. Output is normally a future concept, not an automatically approved requirement.
+Cannot create or modify a production registry entry, Discovery Record, or Change Request (`docs/01-discovery/registry/`, `docs/02-requirements/`, `docs/09-change-requests/`). Cannot change current delivery scope. Does not implement. Output is normally a future concept, not an automatically approved requirement.
 
 ## Allowed Context
 

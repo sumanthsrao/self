@@ -52,7 +52,7 @@ Checks, per the accepted design-conformance gate:
 
 ## Product Surface Visibility
 
-Product navigation, dashboards, and learning/content journeys should expose planned-but-not-yet-built capabilities as **COMING SOON** rather than hiding them, so the overall product journey stays visible. Revisit and activate these surfaces as the relevant business context becomes available (`claude/workflows/sdlc-flow.md`). Tracked alongside active work in `docs/10-traceability/MASTER-STATUS.md`.
+Product navigation, dashboards, and learning/content journeys should expose planned-but-not-yet-built capabilities as **COMING SOON** rather than hiding them, so the overall product journey stays visible. Revisit and activate these surfaces as the relevant business context becomes available (`claude/workflows/sdlc-flow.md`). Tracked alongside active work in the live `MASTER-STATUS.md` (`sumanthsrao/learnova30` — see `docs/10-traceability/MASTER-STATUS-TEMPLATE.md`).
 
 ## Boundaries
 
@@ -60,7 +60,7 @@ Does not own production implementation. Validation is performed against rendered
 
 ## Allowed Context
 
-The requirement entry, linked `docs/04-ui-ux/` documentation, and design-system tokens. Not backend/API documentation, not application source code.
+The requirement's Discovery Handoff Package (registry entry, Discovery Record's s09/s16 notes, Plan, acceptance-criteria reference — `claude/workflows/discovery-procedure.md`, step 13), linked `docs/04-ui-ux/` documentation, and design-system tokens. Not backend/API documentation, not application source code, not the Discovery Record's non-UI dimensions.
 
 ## Handoff Rules
 

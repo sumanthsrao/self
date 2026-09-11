@@ -17,9 +17,11 @@ The same validation script is reused by all three; none of them are a separate i
 ## What the Validation Script Should Check
 
 - **Requirement integrity** — every requirement has an ID; ID has a valid, registered prefix; no duplicate IDs; no duplicate semantic records; no orphan requirements; every Change Request (`CHG` prefix) references a valid, existing requirement ID; Screen IDs are unique within their requirement.
-- **Discovery integrity** — required discovery parameters exist; parameter definitions are valid; new parameters are recognized; S16 (Multi-Platform Availability) has been considered for relevant product/feature requirements — this one check is never skippable, independent of how much depth ##Master gives the other points.
+- **Namespace integrity** — no Requirement ID, Screen ID, Change Request ID, or Discovery Session ID matches the reserved Discovery-dimension pattern `S\d{2}` (`docs/01-discovery/DISCOVERY-FRAMEWORK.md`, Namespace Note); every Discovery Session ID matches `DSC\d+` and is either `open` or has a `promoted_to`/`closed_reason` resolution — never left ambiguous.
+- **Discovery Record integrity** — every `s01`–`s16` key present with `addressed` or `skipped`+`reason`; `s16` never `skipped`; `s15` has all four sub-lists present; `acceptance_criteria` has at least one entry; `open_items` key present; `peer_review_check.evaluated` is `true` — i.e., the full Discovery Complete Gate (`docs/01-discovery/DISCOVERY-RECORD-TEMPLATE.md`) is machine-checkable, not just self-certified.
+- **Registry-as-index integrity** — a registry entry (`docs/01-discovery/registry/<ID>.yaml`) contains only its declared schema fields (`docs/01-discovery/REQUIREMENT-REGISTRY.md`) and never a `dimensions`, `acceptance_criteria`, or `open_items` key — those belong exclusively to the Discovery Record; a registry entry failing this check indicates content duplication, not just a schema typo.
 - **Documentation integrity** — required documents exist; references are valid; no broken references; no unintended duplicate authoritative content.
-- **Traceability** — Discovery → Requirement → Design → Architecture → Code → Test links are present where required.
+- **Traceability** — Discovery Session → Discovery Record → Requirement (registry) → Plan → UI/UX → Architecture → Code → Test links are present where required, matching `docs/10-traceability/TRACEABILITY-MODEL.md`.
 
 ## Rename Detection
 

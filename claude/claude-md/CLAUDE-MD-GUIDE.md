@@ -20,7 +20,8 @@ Rules for what belongs in the root `CLAUDE.md` versus detailed Claude process do
 - Peer review mechanics, template, governance thresholds — lives in `claude/peer-review-process/`.
 - Validation/hook implementation detail — lives in `claude/workflows/validation-and-hooks.md`.
 - Anything still undecided — lives in `claude/OPEN-QUESTIONS.md`, referenced, not duplicated.
-- Live work-item status — lives in `docs/10-traceability/MASTER-STATUS.md`, referenced, not duplicated.
+- Live work-item status — the live `MASTER-STATUS.md` lives in `sumanthsrao/learnova30` (template only in `docs/10-traceability/MASTER-STATUS-TEMPLATE.md` here), referenced, not duplicated.
+- Discovery/Plan execution detail — lives in `claude/workflows/discovery-procedure.md`.
 
 ## Update Rule
 

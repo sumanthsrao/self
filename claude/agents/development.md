@@ -24,7 +24,7 @@ Does not decide requirement scope, does not own UI/UX design, does not perform d
 
 ## Allowed Context
 
-The requirement entry, linked architecture/API documentation (`docs/03-database-api/`), and the relevant `src/`/`tests/` subtree only — not the full source tree.
+The requirement's Discovery Handoff Package (registry entry, Discovery Record, Plan, acceptance-criteria reference — `claude/workflows/discovery-procedure.md`, step 13), linked architecture/API documentation (`docs/03-database-api/`), and the relevant `src/`/`tests/` subtree only — not the full source tree, and not the Discovery Record's dimensions beyond those flagged applicable to Development.
 
 ## Completion Package (handback to ##Master)
 

@@ -22,7 +22,7 @@ A 16-point discovery framework, centrally registered and authoritative for Learn
 | S12 | Performance / Quality | Performance, scalability, reliability, availability, usability, maintainability, other quality attributes. |
 | S13 | Testing / Acceptance | How the capability will be verified — test expectations, acceptance criteria, validation approach, definition of done. |
 | S14 | Operations / Lifecycle | Deployment, monitoring, support, maintenance, configuration, versioning, operational ownership, future lifecycle needs. |
-| S15 | Dependencies / Constraints / Risks | Dependencies, assumptions, constraints, risks, external factors, unresolved decisions, potential impacts. |
+| S15 | Dependencies / Constraints / Risks / Assumptions | Recorded as four explicit sub-lists: dependencies (on other requirements/systems), constraints (technical, business, timeline), risks (what could go wrong, impact), and assumptions (what's being taken as given, unresolved decisions). See `docs/01-discovery/DISCOVERY-RECORD-TEMPLATE.md`. |
 | S16 | Multi-Platform Availability — **MANDATORY** | Desktop, Mobile, Tablet — see below. |
 
 ## S16 — Mandatory, Not Skippable
@@ -35,8 +35,14 @@ S01–S16 is a discovery framework, not a rigid checklist requiring identical de
 
 ## Namespace Note
 
-`S01`–`S16` names **discovery dimensions** only. They do not collide with, and never need to be reconciled against, a product's own implementation-level naming — screen identifiers (`SC01`, `SC02`, ... per `claude/agents/ui.md`) or component/file names a codebase happens to use (e.g. an existing `S1_CockpitDashboard.jsx`). These are three distinct namespaces used in three different contexts (discovery documentation, UI spec addressing, and source code) and are never cross-referenced by number alone. A visual coincidence between a discovery point and a product's own naming is not a conflict requiring either side to be renamed.
+`S01`–`S16` names **discovery dimensions exclusively** — this pattern (`S` followed by exactly two digits) is reserved and must never be assigned to anything else. This was previously ambiguous: the Requirement ID naming convention once used a bare `S` prefix for its "Subject" category, which was the same shape as a discovery dimension ID. That collision is resolved — the Requirement ID prefix for Subject is now `SU` (`SU01`, `SU02`, ...), never `S` alone. See `docs/01-discovery/REQUIREMENT-REGISTRY.md`.
+
+S01–S16 also do not collide with, and never need to be reconciled against, a product's own implementation-level naming — screen identifiers (`SC01`, `SC02`, ... per `claude/agents/ui.md`) or component/file names a codebase happens to use (e.g. an existing `S1_CockpitDashboard.jsx`). Discovery dimensions, Requirement IDs, Screen IDs, and source-code identifiers are four distinct namespaces used in four different contexts and are never cross-referenced by number alone. A visual coincidence between a discovery point and a product's own naming is not a conflict requiring either side to be renamed.
+
+## Discovery Procedure
+
+This document defines *what* each dimension covers. For *how* ##Master runs Discovery — intake, the dimension pass, Discovery Sessions, the Discovery Record, the Discovery Complete gate, and handoff — see `claude/workflows/discovery-procedure.md`.
 
 ## Registry Location
 
-`docs/01-discovery/DISCOVERY-REGISTRY.yaml` (not yet created — no Learnova 3.0 requirements exist yet).
+`docs/01-discovery/registry/<Requirement ID>.yaml` — one file per requirement, in the product repository (`sumanthsrao/learnova30`). See `docs/01-discovery/REQUIREMENT-REGISTRY.md`. Not yet created — no Learnova 3.0 requirements exist yet.
