@@ -63,10 +63,12 @@ discovery_approval:
   requested_by: user
   agreed: true
   date: 2026-09-11
+  approved_at: "2026-09-11T19:32:52+05:30"
 ```
 
 ## Field Notes
 
+- **`date`/`approved_at`** — `date` is the human-readable day, kept for quick scanning; `approved_at` is the canonical, exact record of when approval was actually granted — full ISO-8601 with an explicit timezone offset (`+05:30`, not `Z` unless the approval genuinely happened in UTC), not a date-only value. Every approval-decision block (`discovery_approval` here, `plan_approval` in `PLAN-TEMPLATE.md`, `user_agreement` in `CHANGE-REQUEST-TEMPLATE.md`) carries both fields together. Recording or correcting `approved_at` (e.g. filling in a precise timestamp after the fact) is a metadata correction, not a re-approval — it never changes `agreed`, and doing so must not be treated as reopening the decision.
 - **`dimensions`** — every key `s01`–`s16` must be present. `status: skipped` requires a `reason`; there is no bare "skip" with no explanation. `s16` may never be `skipped`.
 - **`s15`** — four sub-lists (dependencies, constraints, risks, assumptions), each explicit even when empty (`["none identified"]`, never an omitted key).
 - **`acceptance_criteria`** — mandatory. Even a trivial change gets at least one entry; depth (not existence) is ##Master's discretion.

@@ -34,10 +34,12 @@ plan_approval:
   requested_by: user
   agreed: true
   date: 2026-09-11
+  approved_at: "2026-09-11T19:32:52+05:30"
 ```
 
 ## Field Notes
 
+- **`date`/`approved_at`** — see `DISCOVERY-RECORD-TEMPLATE.md`'s Field Notes: `date` is the human-readable day, `approved_at` is the canonical exact ISO-8601 timestamp with timezone. Both are required together on `plan_approval`, same as `discovery_approval`. Recording/correcting `approved_at` is a metadata fix, not a re-approval.
 - **`based_on`** — the Discovery Record this plan was built from. Plan is invalid if the referenced Discovery Record's `status` is not `complete` and its `discovery_approval.agreed` is not `true`.
 - **`acceptance_criteria_mapping`** — keyed by the AC IDs defined in the Discovery Record. This is a verification-method mapping, not a copy of the criteria; a reader needing the actual criterion text follows `based_on` to the Discovery Record.
 - **`plan_approval`** — a second, distinct structured approval gate from `discovery_approval` (same shape as `docs/09-change-requests/CHANGE-REQUEST-TEMPLATE.md`'s `user_agreement` block). For a trivial change, ##Master may obtain both approvals in the same user exchange, but both fields are still recorded separately — see `claude/workflows/discovery-procedure.md`.

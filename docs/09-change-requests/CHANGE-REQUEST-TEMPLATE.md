@@ -23,6 +23,7 @@ user_agreement:
   requested_by: user
   agreed: true
   date: ...
+  approved_at: ...               # exact ISO-8601 timestamp with timezone, e.g. "2026-09-11T19:32:52+05:30" — see Field Notes
 
 resolution: >
   What was decided — chosen variant, merge, or other direction.
@@ -59,6 +60,7 @@ user_agreement:
   requested_by: user
   agreed: true
   date: 2026-09-11
+  approved_at: "2026-09-11T19:32:52+05:30"
 
 resolution: >
   Use Variant 2 as the base; merge Variant 1's mastery-band color coding
@@ -73,3 +75,7 @@ implementation:
 validation:
   status: pending
 ```
+
+## Field Notes
+
+- **`date`/`approved_at`** — same convention as `DISCOVERY-RECORD-TEMPLATE.md`'s and `PLAN-TEMPLATE.md`'s approval blocks: `date` is the human-readable day, `approved_at` is the canonical exact ISO-8601 timestamp with an explicit timezone offset. Both required together on `user_agreement`. Recording/correcting `approved_at` is a metadata fix, not a re-approval, and must not be treated as reopening the decision.
