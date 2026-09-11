@@ -23,7 +23,7 @@ This structure is the template the Learnova 3.0 **product repository** (`sumanth
 
 | Category | Purpose | Status |
 |---|---|---|
-| `01-discovery/` | Discovery framework, requirement naming/registry. | Populated (framework content partly missing — see `docs/01-discovery/DISCOVERY-FRAMEWORK.md`). |
+| `01-discovery/` | Discovery framework, requirement naming/registry. | Populated — all 16 discovery points defined; no requirement entries exist yet. |
 | `02-requirements/` | Functional/non-functional requirements, acceptance criteria. | Empty — no requirements authored yet. |
 | `03-database-api/` | Data model, API contracts, integration definitions. | Empty. |
 | `04-ui-ux/` | UX/UI specs, Stitch references, design system, responsive specs. | Template only (`UI-SPEC-TEMPLATE.md`) — no real requirements exist yet. |

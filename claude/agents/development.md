@@ -28,7 +28,7 @@ The requirement entry, linked architecture/API documentation (`docs/03-database-
 
 ## Completion Package (handback to Master)
 
-Per requirement: requirement ID, changes made, files changed, tests executed, test results, git commit/reference, known limitations, documentation changes. Sent to Master, never directly to UI.
+Per requirement: requirement ID, changes made, files changed, tests executed, test results, git commit/reference, known limitations, documentation changes. Sent to Master, never directly to UI. For work resulting from a Change Request, reference the `CHG` ID alongside the original requirement ID (`claude/workflows/sdlc-flow.md`, Change Requests).
 
 ## Git / GitHub Practice
 
