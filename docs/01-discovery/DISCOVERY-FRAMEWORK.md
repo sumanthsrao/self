@@ -33,6 +33,10 @@ Every relevant product/feature discovery must consider Desktop, Mobile, and Tabl
 
 S01–S16 is a discovery framework, not a rigid checklist requiring identical depth every time. Master decides which points require detailed exploration and which need only lightweight consideration, based on the request's scope, impact, and risk (`claude/agents/master-discovery.md`). S16 is the sole exception to depth discretion — its *applicability* must always be considered, even though how much depth that consideration gets remains Master's call.
 
+## Namespace Note
+
+`S01`–`S16` names **discovery dimensions** only. They do not collide with, and never need to be reconciled against, a product's own implementation-level naming — screen identifiers (`SC01`, `SC02`, ... per `claude/agents/ui.md`) or component/file names a codebase happens to use (e.g. an existing `S1_CockpitDashboard.jsx`). These are three distinct namespaces used in three different contexts (discovery documentation, UI spec addressing, and source code) and are never cross-referenced by number alone. A visual coincidence between a discovery point and a product's own naming is not a conflict requiring either side to be renamed.
+
 ## Registry Location
 
 `docs/01-discovery/DISCOVERY-REGISTRY.yaml` (not yet created — no Learnova 3.0 requirements exist yet).

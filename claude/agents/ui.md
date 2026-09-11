@@ -12,7 +12,7 @@ Master decides whether a change needs Stitch. Small UI changes — labels, minor
 
 ## Screen and Variant Naming
 
-A requirement may span multiple screens. Screens are addressed as `<Requirement ID>-<Screen ID>` (e.g. `CR07-SC01`, `CR07-SC02`), numbered locally within the requirement — Screen IDs are not globally unique on their own and don't need a prefix-registry entry; only the compound ID does the addressing. A single-screen requirement is addressed by its Requirement ID alone.
+A requirement may span multiple screens. Screens are addressed as `<Requirement ID>-<Screen ID>` (e.g. `CR07-SC01`, `CR07-SC02`), numbered locally within the requirement — Screen IDs are not globally unique on their own and don't need a prefix-registry entry; only the compound ID does the addressing. A single-screen requirement is addressed by its Requirement ID alone. Screen IDs are a distinct namespace from a product's own component or file names — an existing component like `S1_CockpitDashboard.jsx` is an implementation identifier, not a Screen ID, and never needs renaming to avoid resembling one (`docs/01-discovery/DISCOVERY-FRAMEWORK.md`, Namespace Note).
 
 For a given requirement (or screen within one), Stitch produces exactly **one** deliverable: the primary output, titled `(Direct Body)` or left unlabeled. Anything explicitly titled `(Variant N: <descriptor>)` is an unrequested exploration alongside it — UI Agent and Development ignore it by default; it does not trigger convergence, evaluation, or a `MASTER-STATUS.md` blocker on its own. It only enters the process when explicitly invoked:
 

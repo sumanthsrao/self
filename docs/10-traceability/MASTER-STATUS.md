@@ -6,6 +6,10 @@ This is Master's operational control view: where each active work item sits in t
 
 It also anchors context continuity: the first place to check when resuming work in a new session or after a context window boundary. Master persists other meaningful work-in-progress state (objective, decisions, progress, pending actions, blockers, references) outside the conversation as needed — this file covers the operational status; deeper state lives in the relevant project document, referenced from here.
 
+## Cross-Repo Scope — Open
+
+This file assumes live status tracking happens here, in `self`. Once real product work happens in a separate product repository (e.g. `sumanthsrao/learnova30`), whether that work's status is tracked centrally here or instantiated as its own `MASTER-STATUS.md` in the product repo is not yet decided. Do not assume either answer — resolve it before relying on this file for cross-repo work; see the product repo's `CLAUDE.md` for the current flag.
+
 ## SDLC Stages
 
 ```text
