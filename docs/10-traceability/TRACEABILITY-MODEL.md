@@ -20,7 +20,7 @@ S16 → Multi-Platform Availability → Responsive Learning Experience
 
 ```text
 Requirement → Decision → Peer Review (GitHub) → ChatGPT Findings
-   → Human Resolution → Master Decision → Implementation → Testing
+   → Human Resolution → ##Master Decision → Implementation → Testing
 ```
 
 Full mechanics: `claude/peer-review-process/peer-review-architecture.md`. Resolved reviews are archived at `docs/10-traceability/peer-reviews/`.

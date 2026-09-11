@@ -38,11 +38,11 @@ This structure is the template the Learnova 3.0 **product repository** (`sumanth
 
 | Subdirectory | Purpose | Status |
 |---|---|---|
-| `commands/` | Per-command documentation (purpose, inputs, agent, output, validation, next step), for commands Master finds useful. | Not authored — commands are discretionary entry points (`claude/workflows/sdlc-flow.md`), documented only as recurring workflows justify one. |
+| `commands/` | Per-command documentation (purpose, inputs, agent, output, validation, next step), for commands ##Master finds useful. | Not authored — commands are discretionary entry points (`claude/workflows/sdlc-flow.md`), documented only as recurring workflows justify one. |
 | `agents/` | The four agent definitions. | Populated. |
 | `claude-md/` | Maintenance rules for root `CLAUDE.md`. | Populated. |
-| `ui-ux-process/` | Detailed Stitch/responsive/component/handoff process docs. | Anticipated by the architecture, not yet authored. Guiding principle (Master decides depth; document principles, not bureaucracy) captured in `claude/agents/ui.md`. |
+| `ui-ux-process/` | Detailed Stitch/responsive/component/handoff process docs. | Anticipated by the architecture, not yet authored. Guiding principle (##Master decides depth; document principles, not bureaucracy) captured in `claude/agents/ui.md`. |
 | `testing-process/` | Test strategy, unit/integration testing, regression, release validation process docs. | Anticipated, not yet authored. Guiding principle captured in `claude/agents/development.md`. |
 | `workflows/` | End-to-end SDLC flow, validation/hooks. | Populated. |
 | `peer-review-process/` | ChatGPT peer review architecture, template, skill spec. | Populated. |
-| `OPEN-QUESTIONS.md` | Decisions still genuinely undecided (most were resolved by the Master Freedom principle). | Populated — short list. |
+| `OPEN-QUESTIONS.md` | Decisions still genuinely undecided (most were resolved by the ##Master Freedom principle). | Populated — short list. |

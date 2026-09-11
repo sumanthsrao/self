@@ -15,7 +15,7 @@ CHG01, CHG02, ... Change Request (e.g. CHG01 changes CR07) — distinct from CR 
 
 A multi-screen requirement is addressed as `<Requirement ID>-<Screen ID>` (e.g. `CR07-SC02`); Screen IDs are scoped within the requirement and don't need their own registry entry — see `claude/agents/ui.md`.
 
-The prefix registry is centrally maintained and governed by Master, who may extend it when genuinely needed. Existing prefixes remain stable — changing an established prefix's meaning is an explicit decision, not a routine edit. Agents must not independently invent a new prefix for an existing concept.
+The prefix registry is centrally maintained and governed by ##Master, who may extend it when genuinely needed. Existing prefixes remain stable — changing an established prefix's meaning is an explicit decision, not a routine edit. Agents must not independently invent a new prefix for an existing concept.
 
 Deleted requirement IDs are retired permanently and never reused, to avoid ambiguous historical references.
 
@@ -48,7 +48,7 @@ tests:
   - test_content_upload
 ```
 
-The registry is the authoritative source for a requirement — other documentation references it rather than duplicating its fields. The entry must exist before any downstream artifact (UI spec, Change Request, code) references its ID — Master creates it the moment meaningful work starts, even if the work began in Stitch or conversation rather than a formal discovery pass (`claude/agents/master-discovery.md`).
+The registry is the authoritative source for a requirement — other documentation references it rather than duplicating its fields. The entry must exist before any downstream artifact (UI spec, Change Request, code) references its ID — ##Master creates it the moment meaningful work starts, even if the work began in Stitch or conversation rather than a formal discovery pass (`claude/agents/master-discovery.md`).
 
 ## Registry Location and Granularity
 

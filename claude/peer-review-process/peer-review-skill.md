@@ -2,16 +2,16 @@
 
 Status: **Accepted / Frozen** (specification only — not yet implemented as an executable Claude Code Skill)
 
-This document specifies the procedure Claude Master follows to invoke and later reconcile a ChatGPT peer review. It is process documentation, consistent with how `claude/ui-ux-process/` and `claude/testing-process/` document procedures without themselves being executable. Implementing this as a runnable Skill is a separate, later step.
+This document specifies the procedure ##Master follows to invoke and later reconcile a ChatGPT peer review. It is process documentation, consistent with how `claude/ui-ux-process/` and `claude/testing-process/` document procedures without themselves being executable. Implementing this as a runnable Skill is a separate, later step.
 
 ## Purpose
 
-Give Master a repeatable, minimal procedure for constructing and posting a peer review request, and for later detecting and acting on its resolution — without requiring a dedicated MCP (see `peer-review-architecture.md` §8).
+Give ##Master a repeatable, minimal procedure for constructing and posting a peer review request, and for later detecting and acting on its resolution — without requiring a dedicated MCP (see `peer-review-architecture.md` §8).
 
 ## Procedure
 
 1. **Classify** the decision against the governance policy in `peer-review-architecture.md` §4 — mandatory, discretionary, or routine.
-2. If mandatory, proceed to invoke. If discretionary, Master judges based on confidence and impact. If routine, log "peer review intentionally not requested" with a reason and continue.
+2. If mandatory, proceed to invoke. If discretionary, ##Master judges based on confidence and impact. If routine, log "peer review intentionally not requested" with a reason and continue.
 3. **Choose review mode** — `blind` (default when confidence is low or multiple approaches are open) or `challenge` (default otherwise). See `peer-review-architecture.md` §5.
 4. **Construct the review request** using `review-template.md`, drawing content only from the relevant registry entry and its linked documentation — never raw source code, secrets, credentials, or unrelated requirement content.
 5. **Run the redaction checklist** before posting:
@@ -29,7 +29,7 @@ Give Master a repeatable, minimal procedure for constructing and posting a peer 
 
 - Registry entry for the requirement/decision.
 - Linked documentation (discovery constraints, design, architecture) relevant to the decision.
-- Master's current position (`challenge` mode only).
+- ##Master's current position (`challenge` mode only).
 
 ## Outputs
 
@@ -40,5 +40,5 @@ Give Master a repeatable, minimal procedure for constructing and posting a peer 
 ## Explicitly Out of Scope
 
 - Any automated parsing of ChatGPT's findings.
-- Any automatic action taken on Master's behalf without a recorded human resolution.
+- Any automatic action taken on ##Master's behalf without a recorded human resolution.
 - Any direct ChatGPT-to-GitHub or ChatGPT-to-Claude integration (human-mediated only in v1 — see `peer-review-architecture.md` §2).

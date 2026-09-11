@@ -27,11 +27,11 @@ A 16-point discovery framework, centrally registered and authoritative for Learn
 
 ## S16 — Mandatory, Not Skippable
 
-Every relevant product/feature discovery must consider Desktop, Mobile, and Tablet. Master decides the appropriate design/implementation for each platform based on business context and capability — but all three must be considered. This is the one point Master cannot skip, even when every other point gets only lightweight treatment.
+Every relevant product/feature discovery must consider Desktop, Mobile, and Tablet. ##Master decides the appropriate design/implementation for each platform based on business context and capability — but all three must be considered. This is the one point ##Master cannot skip, even when every other point gets only lightweight treatment.
 
-## Master's Discretion Over Depth
+## ##Master's Discretion Over Depth
 
-S01–S16 is a discovery framework, not a rigid checklist requiring identical depth every time. Master decides which points require detailed exploration and which need only lightweight consideration, based on the request's scope, impact, and risk (`claude/agents/master-discovery.md`). S16 is the sole exception to depth discretion — its *applicability* must always be considered, even though how much depth that consideration gets remains Master's call.
+S01–S16 is a discovery framework, not a rigid checklist requiring identical depth every time. ##Master decides which points require detailed exploration and which need only lightweight consideration, based on the request's scope, impact, and risk (`claude/agents/master-discovery.md`). S16 is the sole exception to depth discretion — its *applicability* must always be considered, even though how much depth that consideration gets remains ##Master's call.
 
 ## Namespace Note
 

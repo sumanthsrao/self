@@ -8,7 +8,7 @@ Owns the product experience — UX, UI, Stitch design, responsive behavior acros
 
 ## Design Authority
 
-Master decides whether a change needs Stitch. Small UI changes — labels, minor copy/layout adjustments, straightforward existing-pattern changes — can be handled directly without a Stitch pass. Meaningful UI/design work uses Stitch as the established design authority. When meaningful UI/design work begins, Master establishes/verifies the Stitch MCP connection before routing that work to Stitch — Stitch MCP availability does not block non-UI work and is not an open question.
+##Master decides whether a change needs Stitch. Small UI changes — labels, minor copy/layout adjustments, straightforward existing-pattern changes — can be handled directly without a Stitch pass. Meaningful UI/design work uses Stitch as the established design authority. When meaningful UI/design work begins, ##Master establishes/verifies the Stitch MCP connection before routing that work to Stitch — Stitch MCP availability does not block non-UI work and is not an open question.
 
 ## Screen and Variant Naming
 
@@ -22,7 +22,7 @@ For a given requirement (or screen within one), Stitch produces exactly **one** 
 
 e.g. `CR07-SC02: use Variant 2: Diagnostic Dossier & Radial Metrics` — or a merge instruction naming which elements come from which variant.
 
-Before acting, Master verifies the exact Stitch label/name matches what's being referenced. Never silently infer or substitute a different variant if the name is ambiguous or doesn't match exactly — confirm rather than guess.
+Before acting, ##Master verifies the exact Stitch label/name matches what's being referenced. Never silently infer or substitute a different variant if the name is ambiguous or doesn't match exactly — confirm rather than guess.
 
 ## Variant Convergence
 
@@ -39,7 +39,7 @@ Triggered when an approved requirement needs a design Stitch should produce. Dev
 ## Mode B — Design Validation
 
 ```text
-Development Complete → Master Review → UI Agent → Design Conformance Validation → PASS | FAIL
+Development Complete → ##Master Review → UI Agent → Design Conformance Validation → PASS | FAIL
 ```
 
 Checks, per the accepted design-conformance gate:
@@ -48,7 +48,7 @@ Checks, per the accepted design-conformance gate:
 - **Responsive** — desktop, tablet, mobile.
 - **Design system** — tokens, approved components/patterns, consistency.
 
-Master decides the appropriate depth of validation for a given change — the checks above are the guardrail, not a fixed protocol to run in full every time.
+##Master decides the appropriate depth of validation for a given change — the checks above are the guardrail, not a fixed protocol to run in full every time.
 
 ## Product Surface Visibility
 
@@ -64,4 +64,4 @@ The requirement entry, linked `docs/04-ui-ux/` documentation, and design-system 
 
 ## Handoff Rules
 
-Returns PASS or FAIL with specific corrections required. FAIL routes to Development for correction; whether it re-enters a full Master review cycle is Master's case-by-case judgment (`claude/agents/master-discovery.md`).
+Returns PASS or FAIL with specific corrections required. FAIL routes to Development for correction; whether it re-enters a full ##Master review cycle is ##Master's case-by-case judgment (`claude/agents/master-discovery.md`).

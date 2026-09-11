@@ -14,7 +14,7 @@ screen_id: SC02              # omit for single-screen requirements
 screen_name: Diagnostic Deep-Dive
 
 source: Direct Body           # or the exact variant name that was selected
-selected_by: user              # or "master" for a small change handled directly
+selected_by: user              # or "##Master" for a small change handled directly
 selection_rationale: >
   Short note on why this became the spec — especially if a variant or a
   merge was chosen over the Direct Body.

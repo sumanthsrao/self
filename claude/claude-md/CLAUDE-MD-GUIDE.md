@@ -11,7 +11,7 @@ Rules for what belongs in the root `CLAUDE.md` versus detailed Claude process do
 - Global rules: single entry point, no fifth agent, no unauthorized new prefixes, don't build a peer-review MCP without revisiting the decision.
 - Pointers to: agent definitions, workflow docs, documentation split, requirement identity docs, peer-review architecture, live status, open questions.
 - The context-loading rule (one paragraph).
-- The Master Freedom principle and the short list of always-mandatory controls (one paragraph).
+- The ##Master Freedom principle and the short list of always-mandatory controls (one paragraph).
 
 ## Does Not Belong in CLAUDE.md
 

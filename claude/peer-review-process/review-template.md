@@ -24,7 +24,7 @@ status: pending | resolved
 
 # Peer Review — <requirement_id> / <decision_id>
 
-## 1. Review Request (Claude Master)
+## 1. Review Request (##Master)
 **Review type:** architecture | requirement | trade-off | security
 **Decision needed:** <one-sentence framing>
 **Requirement summary:** <short — not the full requirement doc>
@@ -32,7 +32,7 @@ status: pending | resolved
 **Relevant design / architecture:** <links or short excerpts, not full files>
 **Specific questions:**
 - ...
-**Master position:** <proposal + rationale — omitted when review_mode: blind>
+**##Master position:** <proposal + rationale — omitted when review_mode: blind>
 
 ## 2. ChatGPT Review (pasted by human)
 **Assessment:** ...
@@ -47,7 +47,7 @@ status: pending | resolved
 | PF01 | ACCEPT / REJECT / MODIFY / DEFER / NEEDS_DISCUSSION | ... |
 
 ## 4. Final Resolution
-**Outcome:** <what Master should do next>
+**Outcome:** <what ##Master should do next>
 **Resolved by:** <user>
 **Resolved at:** <date>
 
@@ -61,5 +61,5 @@ status: pending | resolved
 ## Notes
 
 - `review_round` increments only if a genuinely new issue is opened for a follow-up; a follow-up on the same question reuses the existing issue and its comment thread.
-- Section 4 (`Final Resolution`) is the field Master checks to determine whether the gated decision may proceed — see `peer-review-architecture.md` §6.
+- Section 4 (`Final Resolution`) is the field ##Master checks to determine whether the gated decision may proceed — see `peer-review-architecture.md` §6.
 - On resolution, the full issue content is snapshotted into `docs/10-traceability/peer-reviews/` per that directory's README.
