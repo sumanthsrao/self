@@ -30,17 +30,17 @@ Status: Established
 | `07-migration/` | Schema/data/version migration, rollback strategy. | Empty. |
 | `08-innovation-roadmap/` | Future ideas, kept out of production scope. | Empty. |
 | `09-change-requests/` | Change request records, linked to the original requirement. | Empty. |
-| `10-traceability/` | Traceability model and generated matrices; peer-review archive. | Populated (`TRACEABILITY-MODEL.md`, `peer-reviews/`). |
+| `10-traceability/` | Traceability model and generated matrices; peer-review archive; live Master Status view. | Populated (`TRACEABILITY-MODEL.md`, `MASTER-STATUS.md`, `peer-reviews/`). |
 
 ## `claude/` Subdirectories
 
 | Subdirectory | Purpose | Status |
 |---|---|---|
-| `commands/` | Per-command documentation (purpose, inputs, agent, output, validation, next step). | Not authored — command set itself unfinalized, see `claude/OPEN-QUESTIONS.md` #9. |
+| `commands/` | Per-command documentation (purpose, inputs, agent, output, validation, next step), for commands Master finds useful. | Not authored — commands are discretionary entry points (`claude/workflows/sdlc-flow.md`), documented only as recurring workflows justify one. |
 | `agents/` | The four agent definitions. | Populated. |
 | `claude-md/` | Maintenance rules for root `CLAUDE.md`. | Populated. |
-| `ui-ux-process/` | Detailed Stitch/responsive/component/handoff process docs. | Anticipated by the architecture, not yet authored — only the high-level lifecycle is captured in `claude/agents/ui.md`. |
-| `testing-process/` | Test strategy, unit/integration testing, regression, release validation process docs. | Anticipated, not yet authored. |
+| `ui-ux-process/` | Detailed Stitch/responsive/component/handoff process docs. | Anticipated by the architecture, not yet authored. Guiding principle (Master decides depth; document principles, not bureaucracy) captured in `claude/agents/ui.md`. |
+| `testing-process/` | Test strategy, unit/integration testing, regression, release validation process docs. | Anticipated, not yet authored. Guiding principle captured in `claude/agents/development.md`. |
 | `workflows/` | End-to-end SDLC flow, validation/hooks. | Populated. |
 | `peer-review-process/` | ChatGPT peer review architecture, template, skill spec. | Populated. |
-| `OPEN-QUESTIONS.md` | Every decision explicitly deferred during review and never resolved. | Populated. |
+| `OPEN-QUESTIONS.md` | Decisions still genuinely undecided (most were resolved by the Master Freedom principle). | Populated — short list. |

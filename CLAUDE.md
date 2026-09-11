@@ -4,7 +4,17 @@ This repository currently holds the **established Claude Code development proces
 
 ## Governing Principle
 
-Few agents, clear boundaries, centralized knowledge, automated synchronization, closed-loop validation.
+Few agents, clear boundaries, centralized knowledge, automated synchronization, closed-loop validation — and **Master discretion within guardrails, not bureaucracy**. The framework provides guardrails; Master decides how much process a given request actually needs. Mandatory controls (below) always apply.
+
+## Master Freedom
+
+Master Discovery is the single decision/orchestration authority and may simplify, combine, defer, or skip any non-mandatory step — for code, documentation, UI/UX, architecture, testing, or traceability — based on scope, impact, risk, and context. Full definition: `claude/agents/master-discovery.md`.
+
+**Always mandatory, regardless of discretion:**
+- S16 (Multi-Platform Availability) must always be considered for relevant product/feature discovery.
+- Architecture, major design, or significant product decisions require the user's involvement and agreement before Master proceeds.
+- Promoting an Innovation idea into production requires the user's agreement before promotion begins.
+- The four-agent boundaries, requirement identity, and traceability recording are never skippable.
 
 ## The Four Agents
 
@@ -17,7 +27,13 @@ All requests enter through **Master Discovery**. There is no fifth agent — a c
 | UI | How it should look/behave/respond, and design conformance | `claude/agents/ui.md` |
 | Development | How we build, test, version-control, and deliver it | `claude/agents/development.md` |
 
+Development may run as one agent or additional subagents (complexity/parallelism/specialization) at Master's discretion — this is internal scaling, not a fifth agent.
+
 End-to-end flow: `claude/workflows/sdlc-flow.md`. Automated validation/hooks: `claude/workflows/validation-and-hooks.md`.
+
+## Development Approach
+
+Build by business context/domain (vertical slice), not isolated technical features — e.g. work on Student includes the complete relevant Student context; work on Exam includes what Exam needs, including related Student information. Capabilities not yet built are exposed in product surfaces as **COMING SOON** rather than hidden, and activated as their context becomes available. Detail: `claude/workflows/sdlc-flow.md`.
 
 ## Documentation Split
 
@@ -26,13 +42,23 @@ End-to-end flow: `claude/workflows/sdlc-flow.md`. Automated validation/hooks: `c
 - `claude/` — how Claude works on Learnova (this split must not be mixed).
 - `project-structure/FOLDER-STRUCTURE.md` — authoritative folder-by-folder definition.
 
+Documentation itself follows Master's discretion: not every change requires a new document — Master decides whether to create, update, reference, or leave documentation unchanged based on the change's significance and impact.
+
 ## Requirement Identity
 
-Semantic alphanumeric IDs (`S01`, `CR02`, `VW01`, ...), prefix = structural category. Central registry and naming rules: `docs/01-discovery/REQUIREMENT-REGISTRY.md`. Discovery framework (S01–S16): `docs/01-discovery/DISCOVERY-FRAMEWORK.md`. Traceability model: `docs/10-traceability/TRACEABILITY-MODEL.md`.
+Semantic alphanumeric IDs (`S01`, `CR02`, `VW01`, ...), prefix = structural category. Central registry and naming rules: `docs/01-discovery/REQUIREMENT-REGISTRY.md`. Discovery framework (S01–S16, S16 mandatory): `docs/01-discovery/DISCOVERY-FRAMEWORK.md`. Traceability model: `docs/10-traceability/TRACEABILITY-MODEL.md`.
 
 ## External Peer Review
 
-Master may invoke an independent ChatGPT review for high-impact decisions, mediated through GitHub with the user as the reconciliation authority. Accepted architecture: `claude/peer-review-process/peer-review-architecture.md`. No dedicated MCP in v1.
+Master decides whether peer review is needed and which mode, for high-impact decisions, mediated through GitHub with the user as the reconciliation authority. Must not unnecessarily block unrelated work. Accepted architecture: `claude/peer-review-process/peer-review-architecture.md`. No dedicated MCP in v1.
+
+## UI / Stitch
+
+Master decides whether a change needs Stitch. Small UI changes (labels, minor adjustments) are handled directly; meaningful UI/design work uses Stitch as the established design authority via the existing Stitch MCP. Detail: `claude/agents/ui.md`.
+
+## Live Status
+
+Current status of every active work item by SDLC stage, including COMING SOON capabilities: `docs/10-traceability/MASTER-STATUS.md`, owned and kept current by Master. This file is not duplicated here or anywhere else.
 
 ## Context-Loading Rule
 
@@ -40,7 +66,7 @@ Agents load registry entry → linked documentation → relevant code. Never re-
 
 ## Before Assuming a Policy Value
 
-A number of decisions were deliberately left open during architecture review rather than guessed. Check `claude/OPEN-QUESTIONS.md` before assuming a retry limit, governance threshold, or process detail not stated explicitly in an agent/workflow doc.
+A small number of items remain genuinely undecided (registry file granularity, UI validation automation mechanism, the S01–S15 discovery content itself, peer-review repo visibility). Check `claude/OPEN-QUESTIONS.md` before assuming an answer — everything else is either stated explicitly in an agent/workflow doc or left to Master's discretion under Master Freedom.
 
 ## Maintenance
 

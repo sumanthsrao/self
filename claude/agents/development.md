@@ -8,7 +8,15 @@ Owns the complete implementation SDLC. There is no separate Git Agent or Test Ag
 
 ## Responsibilities
 
-Frontend, backend, database, APIs, AI/integration work, automated testing, bug fixing, refactoring, build, deployment preparation, git branch management, commits, pull requests, merge workflow, and documentation synchronization for what it builds.
+Frontend, backend, database, APIs, AI/integration work, automated testing, bug fixing, refactoring, build, deployment preparation, git branch management, commits, pull requests, merge workflow, and documentation synchronization for what it builds. Testing depth for a given change is Master's call, guided by documented principles rather than a fixed protocol.
+
+## Development Subagents
+
+Master decides whether a requirement is handled by a single Development Agent instance or additional Development subagents spun up for complexity, parallelism, or specialization. No fixed subagent structure is imposed — this is internal scaling within the Development Agent's boundary, not a new top-level agent.
+
+## Business-Context / Vertical-Slice Delivery
+
+Build by business context/domain rather than isolated technical features. Work on Student includes the complete Student context that's relevant; work on Exam includes what Exam needs, including related Student information. Capabilities not yet built for a given surface are exposed as COMING SOON rather than hidden — see `claude/agents/ui.md` and `claude/workflows/sdlc-flow.md`.
 
 ## Boundaries
 

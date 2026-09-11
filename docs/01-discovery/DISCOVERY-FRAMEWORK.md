@@ -1,6 +1,6 @@
 # Discovery Framework
 
-Status: Partially established — see gap below
+Status: S16 established and mandatory; S01–S15 content still missing (see gap below)
 
 ## Structure
 
@@ -10,25 +10,29 @@ A 16-point discovery framework, centrally registered:
 DISCOVERY-REGISTRY
 │
 ├── S01 … S15  (existing Learnova discovery framework)
-└── S16        Multi-Platform Availability
+└── S16        Multi-Platform Availability — MANDATORY
 ```
 
-The registry is the authoritative source for discovery parameters. It should be extensible — S16 is an addition, not a hard ceiling on the framework.
+The registry is the authoritative source for discovery parameters. All 16 points are defined/documented; not every request needs deep treatment on every point — see Master's Discretion below.
 
 ## S01–S15
 
-Defined by "the existing Learnova discovery framework," referenced but not reproduced or re-derived in this project's Claude Code sessions. **This content has not been provided and does not exist in this repository.** It must be supplied (or its source identified) before `docs/01-discovery/DISCOVERY-REGISTRY.yaml` can be populated. See `claude/OPEN-QUESTIONS.md` #10.
+Defined by "the existing Learnova discovery framework," referenced but not reproduced or re-derived in this project's Claude Code sessions. **This content has not been provided and does not exist in this repository.** It must be supplied (or its source identified) before `docs/01-discovery/DISCOVERY-REGISTRY.yaml` can be populated for points other than S16. See `claude/OPEN-QUESTIONS.md`.
 
-## S16 — Multi-Platform Availability
+## S16 — Multi-Platform Availability (Mandatory)
 
 ```text
-S16 = Multi-Platform Availability
+S16 = Multi-Platform Availability — MANDATORY
   Desktop
   Mobile
   Tablet
 ```
 
-**Open question, not decided:** S16 is currently structured as a 16th subject, a sibling of S01–S15. Because platform availability is a dimension that can apply to many requirements simultaneously (unlike a subject a requirement "belongs to"), whether it should instead be modeled as a cross-cutting modifier/tag on any requirement was raised during review as a possible concern. It was explicitly **not** changed pending a decision that depends on precedent in the S01–S15 framework this project doesn't have visibility into. See `claude/OPEN-QUESTIONS.md` #2.
+S16 remains a discovery point alongside S01–S15 — its structure is unchanged. Its **consideration is mandatory**: Desktop, Mobile, and Tablet must always be evaluated for relevant product/feature discovery, even when Master exercises discretion over depth elsewhere. This is the one discovery point Master cannot skip regardless of scope/impact/risk judgment.
+
+## Master's Discretion Over Depth
+
+Master decides which of the 16 points require depth for a given request (`claude/agents/master-discovery.md`). S16 is the exception: its applicability must always be considered, though the depth of that consideration (e.g. how much platform-specific detail is captured) is still Master's call.
 
 ## Registry Location
 

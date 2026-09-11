@@ -17,7 +17,7 @@ The same validation script is reused by all three; none of them are a separate i
 ## What the Validation Script Should Check
 
 - **Requirement integrity** — every requirement has an ID; ID has a valid, registered prefix; no duplicate IDs; no duplicate semantic records; no orphan requirements.
-- **Discovery integrity** — required discovery parameters exist; parameter definitions are valid; new parameters are recognized.
+- **Discovery integrity** — required discovery parameters exist; parameter definitions are valid; new parameters are recognized; S16 (Multi-Platform Availability) has been considered for relevant product/feature requirements — this one check is never skippable, independent of how much depth Master gives the other points.
 - **Documentation integrity** — required documents exist; references are valid; no broken references; no unintended duplicate authoritative content.
 - **Traceability** — Discovery → Requirement → Design → Architecture → Code → Test links are present where required.
 

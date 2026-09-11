@@ -9,8 +9,9 @@ Rules for what belongs in the root `CLAUDE.md` versus detailed Claude process do
 - Project identity and the governing principle.
 - The four-agent roster and a one-line "owns" statement each, with pointers to full definitions.
 - Global rules: single entry point, no fifth agent, no unauthorized new prefixes, don't build a peer-review MCP without revisiting the decision.
-- Pointers to: agent definitions, workflow docs, documentation split, requirement identity docs, peer-review architecture, open questions.
+- Pointers to: agent definitions, workflow docs, documentation split, requirement identity docs, peer-review architecture, live status, open questions.
 - The context-loading rule (one paragraph).
+- The Master Freedom principle and the short list of always-mandatory controls (one paragraph).
 
 ## Does Not Belong in CLAUDE.md
 
@@ -19,6 +20,7 @@ Rules for what belongs in the root `CLAUDE.md` versus detailed Claude process do
 - Peer review mechanics, template, governance thresholds — lives in `claude/peer-review-process/`.
 - Validation/hook implementation detail — lives in `claude/workflows/validation-and-hooks.md`.
 - Anything still undecided — lives in `claude/OPEN-QUESTIONS.md`, referenced, not duplicated.
+- Live work-item status — lives in `docs/10-traceability/MASTER-STATUS.md`, referenced, not duplicated.
 
 ## Update Rule
 

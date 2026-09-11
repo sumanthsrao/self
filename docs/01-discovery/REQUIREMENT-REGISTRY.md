@@ -12,7 +12,7 @@ CR01, CR02, ...   Creation (e.g. CR02 = Upload Content)
 VW01, VW02, ...   View
 ```
 
-The prefix registry is centrally maintained. Agents must not independently invent a new prefix for an existing concept. **Governance of who is authorized to add a new prefix, and under what criteria, is not decided** — see `claude/OPEN-QUESTIONS.md` #4.
+The prefix registry is centrally maintained and governed by Master, who may extend it when genuinely needed. Existing prefixes remain stable — changing an established prefix's meaning is an explicit decision, not a routine edit. Agents must not independently invent a new prefix for an existing concept.
 
 Deleted requirement IDs are retired permanently and never reused, to avoid ambiguous historical references.
 
@@ -49,4 +49,4 @@ The registry is the authoritative source for a requirement — other documentati
 
 ## Registry Location and Granularity
 
-Proposed location: `docs/01-discovery/DISCOVERY-REGISTRY.yaml` (single file) or an equivalent structured format. A one-file-per-requirement layout (`docs/01-discovery/registry/<ID>.yaml` plus a generated index) was recommended during review to reduce git-conflict risk under parallel UI/Development work, but this was **not confirmed** — see `claude/OPEN-QUESTIONS.md` #6. No requirements exist yet, so no registry file has been created under either layout.
+Proposed location: `docs/01-discovery/DISCOVERY-REGISTRY.yaml` (single file) or an equivalent structured format. A one-file-per-requirement layout (`docs/01-discovery/registry/<ID>.yaml` plus a generated index) was recommended during review to reduce git-conflict risk under parallel UI/Development work, but this was **not confirmed** — see `claude/OPEN-QUESTIONS.md`. No requirements exist yet, so no registry file has been created under either layout.

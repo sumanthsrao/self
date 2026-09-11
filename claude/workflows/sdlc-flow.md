@@ -2,6 +2,10 @@
 
 Status: Established
 
+## Master Freedom
+
+Master decides the process appropriate to each request and may simplify, combine, defer, or skip non-mandatory steps in the flow below, based on scope, impact, and risk. Mandatory controls (S16 consideration, user agreement for major decisions and Innovation promotion, the four-agent boundaries, traceability) always apply — see `claude/agents/master-discovery.md`. Live status for every active work item against this flow: `docs/10-traceability/MASTER-STATUS.md`.
+
 ## Routing
 
 ```text
@@ -16,6 +20,10 @@ MASTER DISCOVERY AGENT
 ```
 
 Master must prevent speculative ideas from automatically entering the production backlog.
+
+## Business-Context / Vertical-Slice Delivery
+
+Work is scoped and delivered by business context/domain, not isolated technical features. A Student-context change includes the complete Student context that's relevant; an Exam-context change includes what Exam needs, including related Student information. Product navigation, dashboards, and learning/content journeys expose not-yet-built related capabilities as **COMING SOON** rather than hiding them; Master revisits and activates these surfaces as the relevant business context becomes available. Tracked in `docs/10-traceability/MASTER-STATUS.md`.
 
 ## Parallel UI + Development
 
@@ -38,7 +46,7 @@ Master must prevent speculative ideas from automatically entering the production
                   UI VALIDATION
 ```
 
-Parallel execution is the established goal — avoid unnecessary sequential dependency. Whether a shared "Interface Contract" artifact (screen/component list, data shape, states) is required to keep both sides in sync before they branch off was recommended during review but not confirmed — see `claude/OPEN-QUESTIONS.md` #8. Until resolved, parallel work proceeds without a mandated shared contract, at the acknowledged risk of rework if UI structure changes after Development has built against it.
+Parallel execution is the established goal — avoid unnecessary sequential dependency. Whether to use a shared "Interface Contract" (screen/component list, data shape, states) to keep both sides in sync before they branch off is Master's discretionary call, not a mandated artifact.
 
 ## Closed-Loop Handback
 
@@ -65,12 +73,12 @@ Design Validation
 Development  COMPLETE
 ```
 
-Development never declares completion independently. A numeric retry/escalation limit on repeated FAIL cycles was flagged as necessary but never set — see `claude/OPEN-QUESTIONS.md` #1.
+Development never declares completion independently. There is no fixed numeric retry limit on FAIL cycles — Master exercises judgment on each cycle, and must involve the user once a repeated disagreement rises to a significant/architectural decision (`claude/agents/master-discovery.md`).
 
 ## Peer Review Integration Point
 
-Before finalizing a high-impact decision, Master may invoke the external ChatGPT peer review capability. This is a capability Master calls, not a step every requirement passes through — governance policy (mandatory/discretionary/routine) is defined in `claude/peer-review-process/peer-review-architecture.md` §4. See that document for the full flow; it is not duplicated here.
+Before finalizing a high-impact decision, Master may invoke the external ChatGPT peer review capability. This is a capability Master calls, not a step every requirement passes through, and it must not unnecessarily block unrelated work. Governance policy (mandatory/discretionary/routine) and mode selection are defined in `claude/peer-review-process/peer-review-architecture.md` §4–5. See that document for the full flow; it is not duplicated here.
 
-## Proposed Commands
+## Commands
 
-`discover`, `design`, `build`, `validate`, `release` were proposed as the command set invoking this workflow. The original architecture explicitly states this set should be reviewed before implementation — it has not been. Treat these as working names only; see `claude/OPEN-QUESTIONS.md` #9.
+`discover`, `design`, `build`, `validate`, `release` are reusable entry points, not mandatory workflow gates. Master decides whether a command is useful for a given request, whether to invoke it, or whether to handle the request directly. New commands are added when a recurring workflow justifies one — the set is not required to be fixed or finalized up front.
