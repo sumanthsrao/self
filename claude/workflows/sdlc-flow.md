@@ -81,6 +81,32 @@ Development never declares completion independently. There is no fixed numeric r
 
 Before finalizing a high-impact decision, Master may invoke the external ChatGPT peer review capability. This is a capability Master calls, not a step every requirement passes through, and it must not unnecessarily block unrelated work. Governance policy (mandatory/discretionary/routine) and mode selection are defined in `claude/peer-review-process/peer-review-architecture.md` §4–5. See that document for the full flow; it is not duplicated here.
 
+## Change Requests
+
+Applies when a decision changes an already in-progress or already-completed requirement — most commonly, choosing or merging a UI variant after Development has started or finished (`claude/agents/ui.md`, Variant Convergence). It is not a new requirement and does not get a new Requirement ID.
+
+```text
+User invokes a variant/change
+        │
+        ▼
+Master logs a Change Request (CHG-ID, linked to the original Requirement ID)
+        │
+Impact assessment: in-progress rework vs. already-completed change
+        │
+Mandatory user agreement (already satisfied — the user is the one requesting it)
+        │
+        ▼
+   UI Agent — variant convergence, updated spec
+        │
+        ▼
+Development — applies the change, referencing the CHG-ID
+        │
+        ▼
+   Testing → Validation → back to Completed
+```
+
+`docs/10-traceability/MASTER-STATUS.md` reflects the work item moving back to whatever stage the change actually needs, with the Change Request named in Blocker/Next Action and Traceability — never silently overwriting the original row's history. Record structure and location: `docs/09-change-requests/CHANGE-REQUEST-TEMPLATE.md`. The `CHG` prefix is distinct from `CR` (Creation) — see `docs/01-discovery/REQUIREMENT-REGISTRY.md`.
+
 ## Commands
 
 `discover`, `design`, `build`, `validate`, `release` are reusable entry points, not mandatory workflow gates. Master decides whether a command is useful for a given request, whether to invoke it, or whether to handle the request directly. New commands are added when a recurring workflow justifies one — the set is not required to be fixed or finalized up front.

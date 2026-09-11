@@ -26,12 +26,12 @@ This structure is the template the Learnova 3.0 **product repository** (`sumanth
 | `01-discovery/` | Discovery framework, requirement naming/registry. | Populated (framework content partly missing — see `docs/01-discovery/DISCOVERY-FRAMEWORK.md`). |
 | `02-requirements/` | Functional/non-functional requirements, acceptance criteria. | Empty — no requirements authored yet. |
 | `03-database-api/` | Data model, API contracts, integration definitions. | Empty. |
-| `04-ui-ux/` | UX/UI specs, Stitch references, design system, responsive specs. | Empty. |
+| `04-ui-ux/` | UX/UI specs, Stitch references, design system, responsive specs. | Template only (`UI-SPEC-TEMPLATE.md`) — no real requirements exist yet. |
 | `05-testing/` | Test strategy, scenarios, regression, release validation. | Empty. |
 | `06-data-cleanup/` | Duplicate/orphan/invalid-data rules, cleanup procedures. | Empty. |
 | `07-migration/` | Schema/data/version migration, rollback strategy. | Empty. |
 | `08-innovation-roadmap/` | Future ideas, kept out of production scope. | Empty. |
-| `09-change-requests/` | Change request records, linked to the original requirement. | Empty. |
+| `09-change-requests/` | Change request records, linked to the original requirement. | Template only (`CHANGE-REQUEST-TEMPLATE.md`). |
 | `10-traceability/` | Traceability model and generated matrices; peer-review archive; live Master Status view. | Populated (`TRACEABILITY-MODEL.md`, `MASTER-STATUS.md`, `peer-reviews/`). |
 
 ## `claude/` Subdirectories

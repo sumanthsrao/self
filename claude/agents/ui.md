@@ -10,10 +10,26 @@ Owns the product experience — UX, UI, Stitch design, responsive behavior acros
 
 Master decides whether a change needs Stitch. Small UI changes — labels, minor copy/layout adjustments, straightforward existing-pattern changes — can be handled directly without a Stitch pass. Meaningful UI/design work uses Stitch as the established design authority. When meaningful UI/design work begins, Master establishes/verifies the Stitch MCP connection before routing that work to Stitch — Stitch MCP availability does not block non-UI work and is not an open question.
 
+## Screen and Variant Naming
+
+A requirement may span multiple screens. Screens are addressed as `<Requirement ID>-<Screen ID>` (e.g. `CR07-SC01`, `CR07-SC02`), numbered locally within the requirement — Screen IDs are not globally unique on their own and don't need a prefix-registry entry; only the compound ID does the addressing. A single-screen requirement is addressed by its Requirement ID alone.
+
+For a given requirement (or screen within one), Stitch produces exactly **one** deliverable: the primary output, titled `(Direct Body)` or left unlabeled. Anything explicitly titled `(Variant N: <descriptor>)` is an unrequested exploration alongside it — UI Agent and Development ignore it by default; it does not trigger convergence, evaluation, or a `MASTER-STATUS.md` blocker on its own. It only enters the process when explicitly invoked:
+
+```text
+<Requirement ID>[-<Screen ID>]: use <exact variant name>
+```
+
+e.g. `CR07-SC02: use Variant 2: Diagnostic Dossier & Radial Metrics` — or a merge instruction naming which elements come from which variant.
+
+## Variant Convergence
+
+Once a variant is explicitly invoked, UI Agent evaluates the selection (or merge) against the requirement's discovery criteria — S09 (information hierarchy, usability) and S16 (does it hold up on Desktop/Mobile/Tablet, not just the breakpoint it was designed at) — and produces one authoritative spec for that screen. The spec records what was chosen and briefly why; superseded variants stay in Stitch but aren't referenced as live inputs. Spec structure and location: `docs/04-ui-ux/UI-SPEC-TEMPLATE.md`. If the requirement is already in progress or completed in Development, this runs through the Change Request flow instead of Mode A directly — see `claude/workflows/sdlc-flow.md`.
+
 ## Mode A — Design Creation
 
 ```text
-Requirement → Missing UI Design → Stitch → UI/UX Specification → Development
+Requirement (+ Screen ID if multi-screen) → Missing UI Design → Stitch → UI/UX Specification → Development
 ```
 
 Triggered when an approved requirement needs a design Stitch should produce. Development continues non-UI work in parallel where practical rather than waiting on the full spec.

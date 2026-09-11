@@ -10,7 +10,10 @@ Structured alphanumeric IDs whose prefix communicates the structural category:
 S01, S02, ...     Subject
 CR01, CR02, ...   Creation (e.g. CR02 = Upload Content)
 VW01, VW02, ...   View
+CHG01, CHG02, ... Change Request (e.g. CHG01 changes CR07) — distinct from CR (Creation)
 ```
+
+A multi-screen requirement is addressed as `<Requirement ID>-<Screen ID>` (e.g. `CR07-SC02`); Screen IDs are scoped within the requirement and don't need their own registry entry — see `claude/agents/ui.md`.
 
 The prefix registry is centrally maintained and governed by Master, who may extend it when genuinely needed. Existing prefixes remain stable — changing an established prefix's meaning is an explicit decision, not a routine edit. Agents must not independently invent a new prefix for an existing concept.
 
