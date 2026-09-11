@@ -43,4 +43,4 @@ Planned/future capabilities Master can activate once the relevant business conte
 
 ## Maintenance
 
-Master updates this file as work items move between stages, change status, or a Coming Soon capability is activated. Keep it lightweight — detail belongs in the requirement's registry entry, design spec, architecture doc, or decision/peer-review record, referenced from the Traceability column, never copied here.
+Master updates this file as work items move between stages, change status, or a Coming Soon capability is activated — including immediately when a mid-flight change occurs (a variant swap, a pivot, a Change Request). Don't wait for a clean SDLC stage transition to reflect it. Keep it lightweight — detail belongs in the requirement's registry entry, design spec, architecture doc, or decision/peer-review record, referenced from the Traceability column, never copied here.

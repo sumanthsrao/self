@@ -48,7 +48,7 @@ tests:
   - test_content_upload
 ```
 
-The registry is the authoritative source for a requirement — other documentation references it rather than duplicating its fields.
+The registry is the authoritative source for a requirement — other documentation references it rather than duplicating its fields. The entry must exist before any downstream artifact (UI spec, Change Request, code) references its ID — Master creates it the moment meaningful work starts, even if the work began in Stitch or conversation rather than a formal discovery pass (`claude/agents/master-discovery.md`).
 
 ## Registry Location and Granularity
 

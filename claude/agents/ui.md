@@ -22,6 +22,8 @@ For a given requirement (or screen within one), Stitch produces exactly **one** 
 
 e.g. `CR07-SC02: use Variant 2: Diagnostic Dossier & Radial Metrics` — or a merge instruction naming which elements come from which variant.
 
+Before acting, Master verifies the exact Stitch label/name matches what's being referenced. Never silently infer or substitute a different variant if the name is ambiguous or doesn't match exactly — confirm rather than guess.
+
 ## Variant Convergence
 
 Once a variant is explicitly invoked, UI Agent evaluates the selection (or merge) against the requirement's discovery criteria — S09 (information hierarchy, usability) and S16 (does it hold up on Desktop/Mobile/Tablet, not just the breakpoint it was designed at) — and produces one authoritative spec for that screen. The spec records what was chosen and briefly why; superseded variants stay in Stitch but aren't referenced as live inputs. Spec structure and location: `docs/04-ui-ux/UI-SPEC-TEMPLATE.md`. If the requirement is already in progress or completed in Development, this runs through the Change Request flow instead of Mode A directly — see `claude/workflows/sdlc-flow.md`.

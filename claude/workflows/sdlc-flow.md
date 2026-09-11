@@ -105,7 +105,7 @@ Development — applies the change, referencing the CHG-ID
    Testing → Validation → back to Completed
 ```
 
-`docs/10-traceability/MASTER-STATUS.md` reflects the work item moving back to whatever stage the change actually needs, with the Change Request named in Blocker/Next Action and Traceability — never silently overwriting the original row's history. Record structure and location: `docs/09-change-requests/CHANGE-REQUEST-TEMPLATE.md`. The `CHG` prefix is distinct from `CR` (Creation) — see `docs/01-discovery/REQUIREMENT-REGISTRY.md`.
+`docs/10-traceability/MASTER-STATUS.md` is updated the moment the Change Request is raised, not deferred to the next checkpoint — reflecting the work item moving back to whatever stage the change actually needs, with the Change Request named in Blocker/Next Action and Traceability, never silently overwriting the original row's history. Record structure and location: `docs/09-change-requests/CHANGE-REQUEST-TEMPLATE.md`. The `CHG` prefix is distinct from `CR` (Creation) — see `docs/01-discovery/REQUIREMENT-REGISTRY.md`.
 
 ## Commands
 
