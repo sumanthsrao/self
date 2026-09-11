@@ -1,38 +1,37 @@
 # Discovery Framework
 
-Status: S16 established and mandatory; S01–S15 content still missing (see gap below)
+Status: Established — all 16 points defined
 
 ## Structure
 
-A 16-point discovery framework, centrally registered:
+A 16-point discovery framework, centrally registered and authoritative for Learnova 3.0.
 
-```text
-DISCOVERY-REGISTRY
-│
-├── S01 … S15  (existing Learnova discovery framework)
-└── S16        Multi-Platform Availability — MANDATORY
-```
+| Point | Name | Covers |
+|---|---|---|
+| S01 | Business / Purpose | Why the capability is needed — business objective, problem being solved, expected value, desired outcome. |
+| S02 | Users / Personas | Who will use or be affected — roles, needs, expectations, relevant user characteristics. |
+| S03 | Scope / Capabilities | What's in/out of scope, major capabilities involved, boundaries of the work. |
+| S04 | User Journeys / Workflows | End-to-end journeys, workflows, interactions, states, major user/system flows. |
+| S05 | Functional Requirements | What the system must do — functional behavior, rules, actions, conditions, expected outcomes. |
+| S06 | Data / Content | Data, content, entities, relationships, sources, ownership, lifecycle, quality, information requirements. |
+| S07 | Integration / External Systems | External systems, APIs, services, platforms, MCPs, third-party dependencies, data exchanges, integration requirements. |
+| S08 | AI / Intelligence | AI, automation, enrichment, recommendation, generation, reasoning, or intelligent behavior required. |
+| S09 | UI / UX | User experience, interaction design, navigation, information architecture, visual design, accessibility, usability. |
+| S10 | Architecture / Technology | Relevant application architecture, technology, components, services, technical patterns, scalability, implementation approach. |
+| S11 | Security / Privacy | Authentication, authorization, privacy, sensitive information, security controls, compliance, security risks. |
+| S12 | Performance / Quality | Performance, scalability, reliability, availability, usability, maintainability, other quality attributes. |
+| S13 | Testing / Acceptance | How the capability will be verified — test expectations, acceptance criteria, validation approach, definition of done. |
+| S14 | Operations / Lifecycle | Deployment, monitoring, support, maintenance, configuration, versioning, operational ownership, future lifecycle needs. |
+| S15 | Dependencies / Constraints / Risks | Dependencies, assumptions, constraints, risks, external factors, unresolved decisions, potential impacts. |
+| S16 | Multi-Platform Availability — **MANDATORY** | Desktop, Mobile, Tablet — see below. |
 
-The registry is the authoritative source for discovery parameters. All 16 points are defined/documented; not every request needs deep treatment on every point — see Master's Discretion below.
+## S16 — Mandatory, Not Skippable
 
-## S01–S15
-
-Defined by "the existing Learnova discovery framework," referenced but not reproduced or re-derived in this project's Claude Code sessions. **This content has not been provided and does not exist in this repository.** It must be supplied (or its source identified) before `docs/01-discovery/DISCOVERY-REGISTRY.yaml` can be populated for points other than S16. See `claude/OPEN-QUESTIONS.md`.
-
-## S16 — Multi-Platform Availability (Mandatory)
-
-```text
-S16 = Multi-Platform Availability — MANDATORY
-  Desktop
-  Mobile
-  Tablet
-```
-
-S16 remains a discovery point alongside S01–S15 — its structure is unchanged. Its **consideration is mandatory**: Desktop, Mobile, and Tablet must always be evaluated for relevant product/feature discovery, even when Master exercises discretion over depth elsewhere. This is the one discovery point Master cannot skip regardless of scope/impact/risk judgment.
+Every relevant product/feature discovery must consider Desktop, Mobile, and Tablet. Master decides the appropriate design/implementation for each platform based on business context and capability — but all three must be considered. This is the one point Master cannot skip, even when every other point gets only lightweight treatment.
 
 ## Master's Discretion Over Depth
 
-Master decides which of the 16 points require depth for a given request (`claude/agents/master-discovery.md`). S16 is the exception: its applicability must always be considered, though the depth of that consideration (e.g. how much platform-specific detail is captured) is still Master's call.
+S01–S16 is a discovery framework, not a rigid checklist requiring identical depth every time. Master decides which points require detailed exploration and which need only lightweight consideration, based on the request's scope, impact, and risk (`claude/agents/master-discovery.md`). S16 is the sole exception to depth discretion — its *applicability* must always be considered, even though how much depth that consideration gets remains Master's call.
 
 ## Registry Location
 

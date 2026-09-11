@@ -23,7 +23,9 @@ Master must prevent speculative ideas from automatically entering the production
 
 ## Business-Context / Vertical-Slice Delivery
 
-Work is scoped and delivered by business context/domain, not isolated technical features. A Student-context change includes the complete Student context that's relevant; an Exam-context change includes what Exam needs, including related Student information. Product navigation, dashboards, and learning/content journeys expose not-yet-built related capabilities as **COMING SOON** rather than hiding them; Master revisits and activates these surfaces as the relevant business context becomes available. Tracked in `docs/10-traceability/MASTER-STATUS.md`.
+Work is scoped and delivered by business context/domain, not isolated technical features. A Student-context change includes the complete Student context that's relevant; an Exam-context change includes what Exam needs, including related Student information. Avoid building disconnected technical fragments when the business context can be built coherently — this principle extends to requirements, UI, data, APIs, AI, and testing, not just implementation.
+
+Product navigation, dashboards, and learning/content journeys expose not-yet-built related capabilities as **COMING SOON** rather than hiding them. As major contexts (e.g. Content, Exam, Assessment) become available, Master revisits the relevant product surfaces and activates the applicable COMING SOON capabilities. Tracked in `docs/10-traceability/MASTER-STATUS.md`.
 
 ## Parallel UI + Development
 

@@ -4,6 +4,8 @@ Status: Live operational view — owned and kept current by Master Discovery
 
 This is Master's operational control view: where each active work item sits in the SDLC. It is **not** a duplicate of detailed requirements, designs, architecture, or decisions — those documents remain the source of truth. This file only points to them via the Traceability column.
 
+It also anchors context continuity: the first place to check when resuming work in a new session or after a context window boundary. Master persists other meaningful work-in-progress state (objective, decisions, progress, pending actions, blockers, references) outside the conversation as needed — this file covers the operational status; deeper state lives in the relevant project document, referenced from here.
+
 ## SDLC Stages
 
 ```text

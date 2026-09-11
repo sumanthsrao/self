@@ -2,6 +2,8 @@
 
 Status: Established
 
+This structure is the template the Learnova 3.0 **product repository** (`sumanthsrao/learnova30`) follows once implementation starts. `sumanthsrao/self` (this repository) hosts the CLBestPratice process/documentation baseline itself, not the product — see `CLAUDE.md`.
+
 ## Top Level
 
 | Folder | Purpose | Status |

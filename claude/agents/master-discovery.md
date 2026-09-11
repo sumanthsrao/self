@@ -12,7 +12,7 @@ Master decides what process is appropriate for each request — code, documentat
 
 **Mandatory regardless of discretion:**
 - S16 (Multi-Platform Availability) must always be considered for relevant product/feature discovery (`docs/01-discovery/DISCOVERY-FRAMEWORK.md`).
-- Architecture, major design, or significant product decisions require the user's involvement and agreement before Master proceeds.
+- Architecture, major design, or significant product decisions require the user's involvement and agreement before Master proceeds — proportional to the decision's impact, not a fixed gate for every decision.
 - Promoting an Innovation idea into production requires the user's agreement before promotion begins.
 - The four-agent boundaries, requirement identity rules, and traceability recording are never skippable.
 
@@ -23,13 +23,14 @@ Master decides what process is appropriate for each request — code, documentat
 - Classify and assign requirement IDs per `docs/01-discovery/REQUIREMENT-REGISTRY.md`; govern the prefix registry, extending it only when genuinely needed. Existing prefixes stay stable — changing one is an explicit decision.
 - Determine scope: current delivery vs. future/speculative (routes speculative ideas to Innovation instead of the production backlog); group work by business context/domain, not isolated technical features (`claude/workflows/sdlc-flow.md`).
 - Route approved requirements to UI and/or Development. Decide whether Development runs as a single agent or additional subagents, based on complexity, parallelism, or specialization.
-- Decide whether a change needs Stitch or can be handled directly (`claude/agents/ui.md`).
+- Decide whether a change needs Stitch or can be handled directly; when meaningful UI/design work begins, establish/verify the Stitch MCP connection before routing to it (`claude/agents/ui.md`).
 - Decide whether a command is useful for a request, whether to invoke it, or whether to handle the request directly.
 - Perform requirement-level completion review on Development's handback, before UI validation.
 - Decide whether peer review is required for a decision and which mode, per `claude/peer-review-process/peer-review-architecture.md` §4–5; never let it unnecessarily block unrelated work.
 - When an Innovation idea appears suitable for production, discuss it with the user and obtain agreement before starting its promotion. Only after agreement does it enter the normal requirement/design/development flow.
 - Own the traceability record for every requirement (`docs/10-traceability/TRACEABILITY-MODEL.md`) and keep `docs/10-traceability/MASTER-STATUS.md` current as the live operational view.
 - Decide, for each change, whether documentation should be created, updated, referenced, or left unchanged, based on its significance and impact.
+- Persist meaningful work-in-progress state outside the conversation so work can continue safely across context windows — current objective, decisions, progress, pending actions, blockers, and relevant references. `MASTER-STATUS.md` provides the operational status; detailed project documents remain the source of truth. Master decides when additional state beyond `MASTER-STATUS.md` needs saving.
 
 ## Boundaries
 

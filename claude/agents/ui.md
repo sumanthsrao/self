@@ -8,7 +8,7 @@ Owns the product experience — UX, UI, Stitch design, responsive behavior acros
 
 ## Design Authority
 
-Master decides whether a change needs Stitch. Small UI changes — labels, minor copy/layout adjustments — can be handled directly without a Stitch pass. Meaningful UI/design work uses Stitch as the established design authority; the Stitch MCP is already established and should be leveraged when appropriate.
+Master decides whether a change needs Stitch. Small UI changes — labels, minor copy/layout adjustments, straightforward existing-pattern changes — can be handled directly without a Stitch pass. Meaningful UI/design work uses Stitch as the established design authority. When meaningful UI/design work begins, Master establishes/verifies the Stitch MCP connection before routing that work to Stitch — Stitch MCP availability does not block non-UI work and is not an open question.
 
 ## Mode A — Design Creation
 
