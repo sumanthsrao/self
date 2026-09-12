@@ -85,6 +85,18 @@ Development  COMPLETE
 
 Development never declares completion independently. There is no fixed numeric retry limit on FAIL cycles — ##Master exercises judgment on each cycle, and must involve the user once a repeated disagreement rises to a significant/architectural decision (`claude/agents/master-discovery.md`).
 
+## Closure Checklist
+
+Closure requires as-built Requirement → Screen → API → Data reconciliation, not just QA sign-off — Design Validation (above) verifies correctness of behavior; this checklist verifies the documentation matches what was actually built. A requirement must not be marked COMPLETE, and its registry `status` must not be set to `completed`, until ##Master has confirmed all of the following:
+
+1. **Implementation arrays populated.** The registry entry's `implementation.frontend`/`implementation.backend` arrays (`docs/01-discovery/REQUIREMENT-REGISTRY.md`, Registry Record Schema) list the actual as-built files — never left empty or placeholder.
+2. **Screen Inventory reconciled.** Any canonical Screen Inventory document (e.g. `SCREEN_INVENTORY.md` in the product repo) includes every screen this requirement introduced, with correct screen ID, name, and route.
+3. **API routes reconciled.** The requirement's actual as-built API route(s)/path(s) match what's recorded in its Plan/Discovery Record. Where a ratified mid-implementation amendment legitimately changed the original route, the final as-built route — not the original draft — is what gets recorded in the registry/inventory.
+4. **DB schema footprint reconciled.** The requirement's actual as-built DB schema footprint (new tables/columns, or an explicit "no schema change, reuses `<X>`") matches what's recorded.
+5. **Amendments cross-referenced.** Any ratified as-built deviation/amendment from the original Plan is cross-referenced/linked from the registry entry, so a future reader is never required to dig through Plan amendment history to find the final contract.
+
+This is a standing rule, not a one-off — it applies to every future requirement's Closure, across every product engagement using this process. A Closure is not complete or valid until this reconciliation is done, in addition to and independent of Design Validation passing.
+
 ## Peer Review Integration Point
 
 Peer review is evaluated in two places: (1) mandatorily, as an explicit Discovery step logged in the requirement's Discovery Record (`claude/workflows/discovery-procedure.md`, step 8), and (2) discretionarily, at any later high-impact decision point during Plan or Execution. In both cases this is a capability ##Master calls, not a step every requirement passes through beyond the mandatory Discovery-stage check, and it must not unnecessarily block unrelated work. Governance policy (mandatory/discretionary/routine) and mode selection are defined in `claude/peer-review-process/peer-review-architecture.md` §4–5. See that document for the full flow; it is not duplicated here.
